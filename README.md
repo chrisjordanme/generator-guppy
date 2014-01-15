@@ -3,7 +3,10 @@
 A generator for [Yeoman](http://yeoman.io).
 
 
-## Getting Started
+## Getting Started with the Guppy Generator
+
+This is a test generator for me to learn how to write Yeoman generators while learning a little about gulpjs, a new streaming build system I keep hearing about. This is a
+a big time work in progress and there are many things that are not functioning correctly.
 
 ### What is Yeoman?
 
