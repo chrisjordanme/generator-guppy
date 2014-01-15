@@ -8,6 +8,24 @@ A generator for [Yeoman](http://yeoman.io).
 This is a test generator for me to learn how to write Yeoman generators while learning a little about gulpjs, a new streaming build system I keep hearing about. This is a
 a big time work in progress and there are many things that are not functioning correctly.
 
+**** As this is still in progress, I have not published to npm. Please continue reading for directions on use in its current state. ****
+
+1) Clone the generator to your preferred location. CD into the generators root folder. Then...
+
+```
+$ npm link
+```
+
+2) Back out of that directory and create a new folder for your project.
+
+```
+$ mkdir myApp && cd $_
+```
+3) Run the generator
+```
+$ yo guppy
+```
+
 ### What is Yeoman?
 
 Trick question. It's not a thing. It's this guy:
