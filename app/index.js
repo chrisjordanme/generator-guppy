@@ -38,17 +38,17 @@ GuppyGenerator.prototype.askFor = function askFor() {
   var prompts = [
       {
         type: 'input',
-        name: 'appName',
+        name: 'appname',
         message: 'Guppy rolls your Yeoman app using gulp.js. What is the name of your app?'
       },
       {
           type: 'checkbox',
-          name: 'frameworks',
-          message: 'Please choose your dependencies:',
+          name: 'features',
+          message: 'What libraries & frameworks would you like?',
           choices: [{
-              name: 'jQuery',
-              value: 'includeJQ',
-              checked: true
+              name: 'Sass with Compass',
+              value: 'includeCompass',
+              checked: false
           }, {
               name: 'Bootstrap',
               value: 'includeBootstrap',
@@ -56,14 +56,27 @@ GuppyGenerator.prototype.askFor = function askFor() {
           }, {
               name: 'Modernizr',
               value: 'includeModernizr',
+              checked: false
+          }, {
+              name: 'jQuery',
+              value: 'includeJQ',
               checked: true
           }]
       }
   ];
 
   this.prompt(prompts, function (props) {
-    this.appName    = props.appName;
-    this.frameworks = props.frameworks;
+    this.appname    = props.appname;
+      var features = props.features;
+
+      function hasFeature(feat) { return features.indexOf(feat) !== -1; }
+
+      // manually deal with the response, get back and store the results.
+      // we change a bit this way of doing to automatically do this in the self.prompt() method.
+      this.includeCompass = hasFeature('includeCompass');
+      this.includeBootstrap = hasFeature('includeBootstrap');
+      this.includeModernizr = hasFeature('includeModernizr');
+      this.includeJQ = hasFeature('includeJQ');
 
     cb();
   }.bind(this));
