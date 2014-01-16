@@ -4,9 +4,6 @@ var path   = require('path');
 var chalk  = require('chalk');
 var yeoman = require('yeoman-generator');
 
-
-
-
 var theGulpster= chalk.cyan('\n|\\   \\\\__     o') +
           chalk.cyan('\n| \\_/    o \\    o  ') +
           chalk.cyan('\n> _   (( <_ oo o o ' + chalk.yellow('... gulp')) +
@@ -96,8 +93,6 @@ GuppyGenerator.prototype.app = function app() {
 
     console.log(this);
 };
-
-GuppyGenerator
 
 GuppyGenerator.prototype.projectfiles = function projectfiles() {
   this.copy('editorconfig', '.editorconfig');
