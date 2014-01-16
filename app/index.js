@@ -71,8 +71,6 @@ GuppyGenerator.prototype.askFor = function askFor() {
 
       function hasFeature(feat) { return features.indexOf(feat) !== -1; }
 
-      // manually deal with the response, get back and store the results.
-      // we change a bit this way of doing to automatically do this in the self.prompt() method.
       this.includeCompass = hasFeature('includeCompass');
       this.includeBootstrap = hasFeature('includeBootstrap');
       this.includeModernizr = hasFeature('includeModernizr');
