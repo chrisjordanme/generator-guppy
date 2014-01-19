@@ -58,20 +58,25 @@ GuppyGenerator.prototype.askFor = function askFor() {
               name: 'jQuery',
               value: 'includeJQ',
               checked: true
+          }, {
+              name: 'Normalize CSS',
+              value: 'includeCssReset',
+              checked: true
           }]
       }
   ];
 
   this.prompt(prompts, function (props) {
-    this.appname    = props.appname;
+      this.appname = props.appname;
       var features = props.features;
 
       function hasFeature(feat) { return features.indexOf(feat) !== -1; }
 
-      this.includeCompass = hasFeature('includeCompass');
+      this.includeCssReset  = hasFeature('includeCssReset');
+      this.includeCompass   = hasFeature('includeCompass');
       this.includeBootstrap = hasFeature('includeBootstrap');
       this.includeModernizr = hasFeature('includeModernizr');
-      this.includeJQ = hasFeature('includeJQ');
+      this.includeJQ        = hasFeature('includeJQ');
 
     cb();
   }.bind(this));
@@ -84,7 +89,7 @@ GuppyGenerator.prototype.app = function app() {
   this.mkdir('app/images');
   this.mkdir('dist');
 
-  this.template('index.html', 'app/index.html');
+  this.template('_index.html', 'app/index.html');
   this.template('main.js', 'app/scripts/main.js');
   this.template('styles.css', 'app/styles/styles.css');
 

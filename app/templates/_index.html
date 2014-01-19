@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title><%= appname %></title>
+    <link rel="stylesheet" href="../styles/styles.css"/>
+
+    <% if (includeCssReset) { %>
+    <link rel="stylesheet" href="bower_components/normalize-css/normalize.css"/>
+    <% } %>
+
+    <% if (includeModernizr) { %>
+    <script src="bower_components/modernizr/modernizr.js"></script><% } %>
+
+</head>
+<body>
+
+<div class="main">
+    <div class="inner">
+        <h1><%= appname %> successfully generated.</h1>
+        <h2>The following dependencies have been automatically included</h2>
+        <ul>
+            <% if (includeCssReset) { %>
+                <li><a href="http://necolas.github.io/normalize.css/">Normalize CSS</a></li>
+            <% } %>
+            <% if (includeModernizr) { %>
+                <li><a href="http://modernizr.com/">Modernizr</a></li>
+            <% } %>
+            <% if (includeJQ) { %>
+                <li><a href="http://jquery.com/">jQuery</a></li>
+            <% } %>
+        </ul>
+    </div>
+</div>
+
+<% if (includeJQ) {%>
+<script src="bower_components/jquery/jquery.js"></script><% } %>
+<script src="../scripts/main.js"></script>
+</body>
+</html>

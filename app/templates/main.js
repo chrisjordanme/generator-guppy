@@ -1,3 +1,3 @@
 (function () {
-    console.log('glub');
+    console.log('success!');
 })();

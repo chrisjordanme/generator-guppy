@@ -56,9 +56,8 @@ gulp.task('minify-css', function () {
         .pipe(gulp.dest('./dist/styles'))
 });
 
+// todo-cj : broken..
 gulp.task('jshint', function () {
     gulp.src('./app/scripts/*.js')
         .pipe(jsHint())
-        // todo-cj : reporters?
-        .pipe(jsHint.reporter('jshint reporter here'))
 });
