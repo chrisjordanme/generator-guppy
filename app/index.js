@@ -36,21 +36,13 @@ GuppyGenerator.prototype.askFor = function askFor() {
       {
         type: 'input',
         name: 'appname',
-        message: 'Guppy rolls your Yeoman app using gulp.js. What is the name of your app?'
+        message: 'What is the name of your app?'
       },
       {
           type: 'checkbox',
           name: 'features',
           message: 'What libraries & frameworks would you like?',
           choices: [{
-              name: 'Sass with Compass',
-              value: 'includeCompass',
-              checked: false
-          }, {
-              name: 'Bootstrap',
-              value: 'includeBootstrap',
-              checked: true
-          }, {
               name: 'Modernizr',
               value: 'includeModernizr',
               checked: false
@@ -73,8 +65,8 @@ GuppyGenerator.prototype.askFor = function askFor() {
       function hasFeature(feat) { return features.indexOf(feat) !== -1; }
 
       this.includeCssReset  = hasFeature('includeCssReset');
-      this.includeCompass   = hasFeature('includeCompass');
-      this.includeBootstrap = hasFeature('includeBootstrap');
+      //this.includeCompass   = hasFeature('includeCompass');
+      //this.includeBootstrap = hasFeature('includeBootstrap');
       this.includeModernizr = hasFeature('includeModernizr');
       this.includeJQ        = hasFeature('includeJQ');
 
