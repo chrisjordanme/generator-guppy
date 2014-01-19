@@ -36,7 +36,7 @@ GuppyGenerator.prototype.askFor = function askFor() {
       {
         type: 'input',
         name: 'appname',
-        message: 'What is the name of your app?'
+        message: 'Guppy rolls your Yeoman app using gulp! What is the name of your app?'
       },
       {
           type: 'checkbox',
