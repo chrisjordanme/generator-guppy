@@ -63,8 +63,8 @@ GuppyGenerator.prototype.askFor = function askFor() {
       function hasFeature(feat) { return features.indexOf(feat) !== -1; }
 
       this.includeCssReset  = hasFeature('includeCssReset');
-      //this.includeCompass   = hasFeature('includeCompass');
-      //this.includeBootstrap = hasFeature('includeBootstrap');
+      this.includeCompass   = hasFeature('includeCompass');
+      this.includeBootstrap = hasFeature('includeBootstrap');
       this.includeModernizr = hasFeature('includeModernizr');
       this.includeJQ        = hasFeature('includeJQ');
 
