@@ -1,6 +1,6 @@
 {
   "name": "generator-guppy",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "A Yeoman webapp generator that leverages gulp streaming build system.",
   "keywords": [
     "yeoman-generator",
@@ -28,7 +28,7 @@
     "async": "~0.2.9"
   },
   "devDependencies": {
-    "gulp": "~3.4.1",
+    "gulp": "~3.4.0",
     "mocha": "~1.12.0",
     "chalk": "~0.2.1"
   },
