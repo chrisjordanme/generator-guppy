@@ -60,7 +60,9 @@ GuppyGenerator.prototype.askFor = function askFor() {
       this.appname = props.appname;
       var features = props.features;
 
-      function hasFeature(feat) { return features.indexOf(feat) !== -1; }
+      function hasFeature(feat) {
+          return features.indexOf(feat) !== -1;
+      }
 
       this.includeCssReset  = hasFeature('includeCssReset');
       this.includeCompass   = hasFeature('includeCompass');
