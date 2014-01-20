@@ -22,7 +22,7 @@ This simple generator allows a user to quickly scaffold an app and begin using t
   $ yo guppy
   ```
 
-3. Run gulp's default task which launches the server. Other tasks included in the gulpfile will need to be run separately.
+3. Run gulp's default task which launches the server. Other tasks included in the gulpfile will need to be run separately and are currently a wee bit janky.
 
   ```
   $ gulp
