@@ -1,6 +1,6 @@
 {
   "name": "generator-guppy",
-  "version": "0.2.0",
+  "version": "0.2.4",
   "description": "A Yeoman webapp generator that leverages gulp streaming build system.",
   "keywords": [
     "yeoman-generator",
@@ -9,7 +9,7 @@
   ],
   "homepage": "https://github.com/chrisjordanme/generator-guppy",
   "bugs": "https://github.com/chrisjordanme/generator-guppy/issues",
-    "author": {
+  "author": {
     "name": "Chris Jordan",
     "email": "cljordan1@gmail.com",
     "url": "https://github.com/chrisjordanme"
