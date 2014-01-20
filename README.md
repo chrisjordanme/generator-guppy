@@ -1,4 +1,4 @@
-# generator-guppy [![Build Status](https://secure.travis-ci.org/chrisjordanme/generator-guppy.png?branch=master)](https://travis-ci.org/chrisjordanme/generator-guppy)
+# generator-guppy
 
 ## gulp + Yeoman = guppy
 
