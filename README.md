@@ -6,7 +6,7 @@ A webapp generator for [Yeoman](http://yeoman.io) that leverages the [gulp strea
 
 This is my first Yeoman generator so it was mostly built so I could learn more about writing Yeoman generators. I'm also interested in learning more about gulp!
 
-This simple generator allows a user to quickly scaffold an app and begin using the gulpfile immediately. The app runs on a *very* simple connect server. I hope it's at least enough to put devs a little closer to a Yeoman workflow using gulp.
+This simple generator allows a user to quickly scaffold an app and begin using the gulpfile immediately. The app runs on a *very* simple connect server. I hope it's at least enough to put devs a little closer to a Yeoman webapp workflow using gulp.
 
 ## Getting Started
 
