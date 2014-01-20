@@ -4,59 +4,57 @@ var path   = require('path');
 var chalk  = require('chalk');
 var yeoman = require('yeoman-generator');
 
-var theGulpster= chalk.cyan('\n|\\   \\\\__     o') +
-          chalk.cyan('\n| \\_/    o \\    o  ') +
-          chalk.cyan('\n> _   (( <_ oo o o ' + chalk.yellow('... gulp')) +
-          chalk.cyan('\n| / \\__+___/') +
-          chalk.cyan('\n|/     |/') +
-          chalk.cyan('\n\'');
+var theGulpster = chalk.cyan('\n|\\   \\\\__     o') +
+                  chalk.cyan('\n| \\_/    o \\    o  ') +
+                  chalk.cyan('\n> _   (( <_ oo o o ' + chalk.yellow('... gulp')) +
+                  chalk.cyan('\n| / \\__+___/') +
+                  chalk.cyan('\n|/     |/') +
+                  chalk.cyan('\n\'');
 
 var GuppyGenerator = module.exports = function GuppyGenerator(args, options, config) {
-  yeoman.generators.Base.apply(this, arguments);
+    yeoman.generators.Base.apply(this, arguments);
 
-  this.on('end', function () {
-    this.installDependencies({ skipInstall: options['skip-install'] });
-  });
+    this.on('end', function () {
+        this.installDependencies({ skipInstall: options['skip-install'] });
+    });
 
-  this.pkg = JSON.parse(this.readFileAsString(path.join(__dirname, '../package.json')));
+    this.pkg = JSON.parse(this.readFileAsString(path.join(__dirname, '../package.json')));
 };
 
 util.inherits(GuppyGenerator, yeoman.generators.Base);
 
 GuppyGenerator.prototype.askFor = function askFor() {
-  var cb = this.async();
+    var cb = this.async();
 
-  // have Yeoman greet the user.
-  console.log(this.yeoman);
+      // have Yeoman greet the user.
+      console.log(this.yeoman);
 
-  // have the gulpster greet the user.
-  console.log(theGulpster);
+      // have the gulpster greet the user.
+      console.log(theGulpster);
 
-  var prompts = [
-      {
+    var prompts = [{
         type: 'input',
         name: 'appname',
         message: 'Guppy rolls your Yeoman app using gulp! What is the name of your app?'
       },
       {
-          type: 'checkbox',
-          name: 'features',
-          message: 'What libraries & frameworks would you like?',
-          choices: [{
-              name: 'Modernizr',
-              value: 'includeModernizr',
-              checked: false
-          }, {
-              name: 'jQuery',
-              value: 'includeJQ',
-              checked: true
-          }, {
-              name: 'Normalize CSS',
-              value: 'includeCssReset',
-              checked: true
-          }]
-      }
-  ];
+        type: 'checkbox',
+        name: 'features',
+        message: 'What libraries & frameworks would you like?',
+        choices: [{
+            name: 'Modernizr',
+            value: 'includeModernizr',
+            checked: false
+        }, {
+            name: 'jQuery',
+            value: 'includeJQ',
+            checked: true
+        }, {
+            name: 'Normalize CSS',
+            value: 'includeCssReset',
+            checked: true
+        }]
+      }];
 
   this.prompt(prompts, function (props) {
       this.appname = props.appname;
@@ -75,20 +73,18 @@ GuppyGenerator.prototype.askFor = function askFor() {
 };
 
 GuppyGenerator.prototype.app = function app() {
-  this.mkdir('app');
-  this.mkdir('app/scripts');
-  this.mkdir('app/styles');
-  this.mkdir('app/images');
-  this.mkdir('dist');
+    this.mkdir('app');
+    this.mkdir('app/scripts');
+    this.mkdir('app/styles');
+    this.mkdir('app/images');
+    this.mkdir('dist');
 
-  this.template('_index.html', 'app/index.html');
-  this.template('main.js', 'app/scripts/main.js');
-  this.template('styles.css', 'app/styles/styles.css');
+    this.template('_index.html', 'app/index.html');
+    this.template('main.js', 'app/scripts/main.js');
+    this.template('styles.css', 'app/styles/styles.css');
 
-  this.copy('_package.json', 'package.json');
-  this.copy('_bower.json', 'bower.json');
-
-    console.log(this);
+    this.copy('_package.json', 'package.json');
+    this.copy('_bower.json', 'bower.json');
 };
 
 GuppyGenerator.prototype.projectfiles = function projectfiles() {

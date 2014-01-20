@@ -39,25 +39,25 @@ gulp.task('server', function () {
 // todo-cj : roll a 'build' task..
 gulp.task('scripts', function () {
     gulp.src('./app/scripts/*.js')
-        .pipe(concat('all.js'))
-        .pipe(gulp.dest('./dist/scripts'))
+    .pipe(concat('all.js'))
+    .pipe(gulp.dest('./dist/scripts'))
 });
 
 gulp.task('uglify', function () {
     gulp.src('./app/scripts/*.js')
-        .pipe(uglify())
-        .pipe(gulp.dest('./dist/scripts/ugly'))
+    .pipe(uglify())
+    .pipe(gulp.dest('./dist/scripts/ugly'))
 });
 
 gulp.task('minify-css', function () {
     var opts = {};
     gulp.src('./app/styles/*.css')
-        .pipe(minCSS(opts))
-        .pipe(gulp.dest('./dist/styles'))
+    .pipe(minCSS(opts))
+    .pipe(gulp.dest('./dist/styles'))
 });
 
-// todo-cj : broken..
+// todo-cj : broken.. :(
 gulp.task('jshint', function () {
     gulp.src('./app/scripts/*.js')
-        .pipe(jsHint())
+    .pipe(jsHint())
 });
