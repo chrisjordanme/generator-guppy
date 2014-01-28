@@ -80,7 +80,7 @@ gulp.task('minify-css', function () {
     gulp.src('./app/styles/*.css')
         .pipe(minCSS(opts))
         .pipe(gulp.dest('./dist/styles'))
-        // todo-cj : get min rename working
+        // todo-cj : get min rename working -- see styles task - jw
         .pipe(rename('styles.min.css'))
         .pipe(gulp.dest('./dist/styles'))
 });
