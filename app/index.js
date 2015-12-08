@@ -46,6 +46,14 @@ GuppyGenerator.prototype.askFor = function askFor() {
             value: 'includeModernizr',
             checked: false
         }, {
+            name: 'Bootstrap',
+            value: 'includeBootstrap',
+            checked: false
+        }, {
+            name: 'Sass',
+            value: 'includeCompass',
+            checked: false
+        }, {
             name: 'jQuery',
             value: 'includeJQ',
             checked: true
